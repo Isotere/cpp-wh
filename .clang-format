@@ -80,7 +80,7 @@ AlwaysBreakBeforeMultilineStrings: true
 AttributeMacros:
   - __capability
 BinPackArguments: true
-BinPackParameters: true
+BinPackParameters: OnePerLine
 BitFieldColonSpacing: Both
 BraceWrapping:
   AfterCaseLabel: false
@@ -117,7 +117,7 @@ BreakInheritanceList: BeforeColon
 BreakStringLiterals: true
 BreakTemplateDeclarations: Yes
 ColumnLimit: 120
-CommentPragmas: '^ IWYU pragma:'
+CommentPragmas: "^ IWYU pragma:"
 CompactNamespaces: false
 ConstructorInitializerIndentWidth: 4
 ContinuationIndentWidth: 4
@@ -144,16 +144,16 @@ IncludeCategories:
     Priority: 1
     SortPriority: 0
     CaseSensitive: false
-  - Regex: '^<.*'
+  - Regex: "^<.*"
     Priority: 2
     SortPriority: 0
     CaseSensitive: false
-  - Regex: '.*'
+  - Regex: ".*"
     Priority: 3
     SortPriority: 0
     CaseSensitive: false
-IncludeIsMainRegex: '([-_](test|unittest))?$'
-IncludeIsMainSourceRegex: ''
+IncludeIsMainRegex: "([-_](test|unittest))?$"
+IncludeIsMainSourceRegex: ""
 IndentAccessModifiers: false
 IndentCaseBlocks: false
 IndentCaseLabels: true
@@ -181,8 +181,8 @@ KeepEmptyLines:
   AtStartOfFile: true
 LambdaBodyIndentation: Signature
 LineEnding: DeriveLF
-MacroBlockBegin: ''
-MacroBlockEnd: ''
+MacroBlockBegin: ""
+MacroBlockEnd: ""
 MainIncludeChar: Quote
 MaxEmptyLinesToKeep: 1
 NamespaceIndentation: None
@@ -214,9 +214,9 @@ RawStringFormats:
       - cpp
       - Cpp
       - CPP
-      - 'c++'
-      - 'C++'
-    CanonicalDelimiter: ''
+      - "c++"
+      - "C++"
+    CanonicalDelimiter: ""
     BasedOnStyle: google
   - Language: TextProto
     Delimiters:
@@ -237,7 +237,7 @@ RawStringFormats:
     CanonicalDelimiter: pb
     BasedOnStyle: google
 ReferenceAlignment: Pointer
-ReflowComments: true
+ReflowComments: Always
 RemoveBracesLLVM: false
 RemoveParentheses: Leave
 RemoveSemicolon: false
@@ -246,7 +246,7 @@ RequiresExpressionIndentation: OuterScope
 SeparateDefinitionBlocks: Leave
 ShortNamespaceLines: 1
 SkipMacroDefinitionBody: false
-SortIncludes: CaseSensitive
+SortIncludes: { Enabled: true }
 SortJavaStaticImport: Before
 SortUsingDeclarations: LexicographicNumeric
 SpaceAfterCStyleCast: false
@@ -304,5 +304,3 @@ WhitespaceSensitiveMacros:
   - NS_SWIFT_NAME
   - PP_STRINGIZE
   - STRINGIZE
-...
-

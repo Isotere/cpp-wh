@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 4.0)
+cmake_minimum_required(VERSION 4.1)
 
 set(PATCH_VERSION "1" CACHE INTERNAL "Patch version")
 set(PROJECT_VERSION 0.0.${PATCH_VERSION})
@@ -43,5 +43,5 @@ if (WITH_BOOST_TEST)
     enable_testing()
 endif ()
 
-add_subdirectory(src/hello_world)
+add_subdirectory(src)
 
